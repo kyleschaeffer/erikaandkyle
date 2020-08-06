@@ -1,7 +1,7 @@
 // days since
 var now = new Date();
 var then = new Date('06/07/2014');
-var days = (now.getTime() - then.getTime()) / (3600 * 24 * 1000);
+var days = Math.round((now.getTime() - then.getTime()) / (3600 * 24 * 1000));
 var daysFormatted = days.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',');
 document.getElementById('since').innerText = daysFormatted;
 
